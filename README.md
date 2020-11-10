@@ -19,4 +19,7 @@ The Paley graph folder contains the QR (N) and QR_family (k,p) scripts.
 QR (N) generates 1 graph on N vertices, and the generation structure differs from the structure in the C_ (N, s1, s2) script. Here now we are not limited to the number of generators. This is convenient from the definition of Paley graphs.
 QR_family (k,p) generates a family of graphs with prime numbers ranging from k to P.
 
+The QR (N) and QR_1 (N) scripts have a similar structure and are similar, the difference is that QR_1 (N) is written to a previously created QR folder, where the graphs are placed.
+
 Examples of graph data generation results can be seen in the Paley graph / Examples folder.
+
