@@ -12,3 +12,11 @@ Script С_ (N, s1, s2) generates a graph with N vertices and two generators. As 
 Example:
 In the Example folder you can see the files describing the graph C (9,2,3). The result of integrating this data into Gephi after the necessary reduction to the required visual form, namely the circulant, is shown in the figure below.
 ![alt text](Example/C(9,2,3)/C(9,2,3).png "Описание будет тут")
+
+# Paley graphs
+Next, let's talk about Cayley graphs.
+The Paley graph folder contains the QR (N) and QR_family (p) scripts.
+QR (N) generates 1 graph on N vertices, and the generation structure differs from the structure in the C_ (N, s1, s2) script. Here now we are not limited to the number of generators. This is convenient from the definition of Paley graphs.
+QR_family (p) generates a family of graphs with prime numbers ranging from 3 to P.
+
+Examples of graph data generation results can be seen in the Paley graph / Examples folder.
