@@ -11,3 +11,4 @@ Script С_ (N, s1, s2) generates a graph with N vertices and two generators. As 
 
 Example:
 In the Example folder you can see the files describing the graph C (9,2,3). The result of integrating this data into Gephi after the necessary reduction to the required visual form, namely the circulant, is shown in the figure below.
+![alt text](Example/C(9,2,3)/C(9,2,3).png "Описание будет тут")
