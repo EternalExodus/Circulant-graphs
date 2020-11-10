@@ -6,3 +6,5 @@ When talking about graphs of this kind, we are talking about their signature of 
         N is the number of graph vertices; 
         s1, s2, ..., sn are generators of the graph, that is, these numbers define an edge connecting the vertices x and x + s1, x + s2, ..., x + sn.
 This is how we have defined the graph.
+
+Script С_ (N, s1, s2) generates a graph with N vertices and two generators. As a result of the script's work, we have 2 csv files of the format required for further integration into Gephi software: a file with vertex designations and a file with designations and vertices that they connect.
