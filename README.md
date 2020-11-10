@@ -8,3 +8,6 @@ When talking about graphs of this kind, we are talking about their signature of 
 This is how we have defined the graph.
 
 Script С_ (N, s1, s2) generates a graph with N vertices and two generators. As a result of the script's work, we have 2 csv files of the format required for further integration into Gephi software: a file with vertex designations and a file with designations and vertices that they connect.
+
+Example:
+in the folder Example C (9,2,3) you can see the files described above. The result of integrating this data into Gephi after the necessary reduction to the required visual form, namely the circulant, is shown in the figure below.
