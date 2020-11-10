@@ -1,0 +1,6 @@
+def QR_family(k,p):
+    import math
+    for num in range(2,p+1):
+        if all(num%t!=0 for t in range(2,int(math.sqrt(num))+1)) and num > k:
+            print(num)
+            QR_1(num)
