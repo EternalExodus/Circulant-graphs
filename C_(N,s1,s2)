@@ -1,0 +1,45 @@
+    import csv
+    import os
+    import pathlib
+def C_(N,s1,s2):
+       
+    i = 1
+    j = 1
+    
+    path = pathlib.Path("../Desktop/C({},{},{})".format(N, s1, s2)) #цкшеу your path to save the folder
+    os.mkdir(path)
+        
+#Generate Vertexes
+    FILENAME_V = path/"C_Vertex({}_{}_{}).csv".format(N, s1, s2)
+    with open(FILENAME_V, "w", newline="") as file_v:
+        writer = csv.writer(file_v,delimiter=';')
+        writer.writerows([["Id", "Label"]])
+    
+    with open(FILENAME_V, "a", newline="") as file_v:
+        writer = csv.writer(file_v,delimiter=';')
+        for i in range (i, N+1):
+            writer.writerow([i, i])
+    with open(FILENAME_V) as f:
+        print(f.read())
+    
+#Generate Edges      
+    FILENAME_E = path/"C_Edges({}_{}_{}).csv".format(N, s1, s2)
+    with open(FILENAME_E, "w", newline="") as file_e:
+        writer = csv.writer(file_e,delimiter=';')
+        writer.writerows([["Source", "Target"]])
+    
+    with open(FILENAME_E, "a", newline="") as file_e:
+        writer = csv.writer(file_e,delimiter=';')
+        for j in range (j, N+1):
+            if j+s1 <= N:
+                writer.writerow([j, j+s1])
+                if j+s2 <= N:
+                     writer.writerow([j, j+s2])
+                else:
+                    writer.writerow([j, j+s2-N])
+            else:
+                writer.writerow([j, j+s1-N])
+                writer.writerow([j, j+s2-N])   
+    
+    with open(FILENAME_E) as f:
+        print(f.read())
