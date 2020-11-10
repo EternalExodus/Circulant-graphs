@@ -7,7 +7,7 @@ def C_(N,s1,s2):
     i = 1
     j = 1
     
-    path = pathlib.Path("../Desktop/C({},{},{})".format(N, s1, s2)) #цкшеу your path to save the folder
+    path = pathlib.Path("../Desktop/C({},{},{})".format(N, s1, s2)) #write your path to save the folder
     os.mkdir(path)
         
 #Generate Vertexes
