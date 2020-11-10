@@ -3,7 +3,7 @@ def QR_1(N):
     import os
     import pathlib
     
-#Образующие графа Пэли
+#Paley graph generators
     i = 0
     j = 1
     f = int((N-1)/2)
@@ -21,7 +21,7 @@ def QR_1(N):
     p = "QR_Edges({}).csv".format(string)
     
     
-    path = pathlib.Path("C:/Users/funny/Desktop/QR/QR({})".format(string))
+    path = pathlib.Path("../Desktop/QR/QR({})".format(string))
     os.mkdir(path)
     
     #Generate Vertexes
