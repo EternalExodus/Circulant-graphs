@@ -14,7 +14,7 @@ In the Example folder you can see the files describing the graph C (9,2,3). The 
 ![alt text](Example/C(9,2,3)/C(9,2,3).png "Описание будет тут")
 
 # Paley graphs
-Next, let's talk about Cayley graphs.
+Next, let's talk about Payley graphs.
 The Paley graph folder contains the QR (N) and QR_family (k,p) scripts.
 QR (N) generates 1 graph on N vertices, and the generation structure differs from the structure in the C_ (N, s1, s2) script. Here now we are not limited to the number of generators. This is convenient from the definition of Paley graphs.
 QR_family (k,p) generates a family of graphs with prime numbers ranging from k to P.
@@ -23,3 +23,11 @@ The QR (N) and QR_1 (N) scripts have a similar structure and are similar, the di
 
 Examples of graph data generation results can be seen in the Paley graph / Examples folder.
 
+# Graph_parameters
+This scripts describes all the necessary parameters of the graph to identify the best of them in the context of this task, namely: N - the number of vertices, s - the list of generators, Edge_number - the number of edges, Complete_edges - the number of vertices of the complete graph on N vertices, Density - graph density (the ratio of the number of vertices of a given graph to the number of vertices of the complete graph), Density_rnd - the rounded density value, Diameter, Avg_length - average path length in the graph.
+
+# Graph_parameters_to_csv
+This script describes the implementation of the generation of parameters of the Paley graph family and their recording into a csv file.
+
+# Graph_bisection
+This script describes the implementation of counting the bisection of a graph, as well as visualization of the original and divided into 2 graphs.
