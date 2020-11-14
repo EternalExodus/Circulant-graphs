@@ -1,0 +1,74 @@
+#Вывод параметров графов Пэли
+import networkx as nx
+import pandas as pd
+from pandas import DataFrame
+from matplotlib import pyplot as plt
+
+def Graph_parameters(N):
+    f = int((N-1)/2)
+    i = 0
+    paley = []
+    for i in range (1,f+1):
+        if i*i % N <= f:
+            paley.append(i*i % N)
+    paley.sort()
+    s = paley
+    #print(N)
+    #print("s =", paley)
+    
+    last_elem = s[-1]
+    index = s.index(last_elem)
+    #print("last_elem =",last_elem)
+    #print("index =",index)
+
+    lst_nodes = []
+    lst_edge = []
+    
+    i = 0
+    
+    for i in range(1, N+1):
+        lst_nodes.append(i)
+    lst_nodes
+    
+    i = 0
+    j = 1
+    for j in range(j,N+1):
+        for i in range(0,index+1):
+            if j+s[i] <= N:
+                lst_edge.append((j, j+s[i]))
+            else:
+                lst_edge.append((j, j+s[i]-N))
+
+    #print(lst_nodes)
+    #print(lst_edge)
+    
+    G = nx.Graph()
+    G.add_nodes_from(lst_nodes)
+    G.add_edges_from(lst_edge)
+
+    i = 0
+    j = 1
+    k = 0 
+    #edges number
+
+    for j in range(j,N+1):
+        for i in range(0,index+1):
+            k = k+1
+            
+    #print("edges_num =", k)
+    
+    Complete_edges = int(N*(N-1)/2)
+    #print("Complete_edges =", Complete_edges)
+    
+    Density = k/Complete_edges
+    #print("Density =", Density)
+    Density_rnd = round(Density,2)
+    #print("Density_round =", round(Density,2))
+    Diameter = nx.diameter(G)
+    #print("Diameter =", nx.diameter(G))
+    Avg_length = round(nx.average_shortest_path_length(G),2)
+    #print("Avg_length_shortest =",round(nx.average_shortest_path_length(G),2))
+   
+    
+    data = [N, s, k, Complete_edges, Density, Density_rnd, Diameter, Avg_length]
+    print (data)
