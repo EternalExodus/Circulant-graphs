@@ -1,0 +1,14 @@
+import math
+
+df = DataFrame(columns=['N', 's', 'k', 'Complete_edges', 'Density', 'Density_rnd', 'Diameter', 'Avg_length'])
+length_df = 0
+i = 0
+for num in range(3,101):
+    if all(num%i!=0 for i in range(2,int(math.sqrt(num))+1)):
+        params = Graph_parameters(num)
+        df.loc[i] = params
+        i += 1
+        
+
+df.to_csv('QR_params.csv', index=False)
+df
