@@ -31,3 +31,4 @@ This script describes the implementation of the generation of parameters of the 
 
 # Graph_bisection
 This script describes the implementation of counting the bisection of a graph, as well as visualization of the original and divided into 2 graphs.
+![alt text](Example/C(9,2,3)/Graph_bisection_N=7.png "Описание будет тут")
