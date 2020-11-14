@@ -1,0 +1,77 @@
+import networkx as nx
+from matplotlib import pyplot as plt
+import networkx as nx
+from networkx.algorithms.community import kernighan_lin_bisection
+
+#PALEY BISECTION
+def bisect(N):
+    f = int((N-1)/2)
+    i = 0
+    j = 1
+    paley = []
+    for i in range (1,f+1):
+        if i*i % N <= f:
+            paley.append(i*i % N)
+    paley.sort()
+    s = paley
+    print(paley)
+    print("len =", len(paley))
+
+    last_elem = s[-1]
+    index = s.index(last_elem)
+    print("last_elem =",last_elem)
+    print("index =",index)
+
+    lst_nodes = []
+    lst_edge = []
+
+    for i in range(1, N+1):
+        lst_nodes.append(i)
+    lst_nodes 
+    i = 0
+
+    for j in range(j,N+1):
+        for i in range(0,index+1):
+            if j+s[i] <= N:
+                lst_edge.append((j, j+s[i]))
+            else:
+                lst_edge.append((j, j+s[i]-N))
+
+    print("lst_nodes =", lst_nodes)
+    print("lst_edge =", lst_edge)
+
+    G = nx.Graph()
+    G.add_nodes_from(lst_nodes)
+    G.add_edges_from(lst_edge)
+    nx.draw(G, with_labels=True, font_weight='bold')
+    plt.show()
+
+    i = 0
+    j = 0
+    k = 0
+
+    kern_lin = kernighan_lin_bisection(G, partition=None, max_iter=10, weight='weight', seed=None)
+    kern_lin
+
+    kern = [tuple(x) for x in kern_lin]
+    print(lst_edge)
+    kern
+    new_lst_edge = []
+    for i in range(len(kern)):
+        for j in range(len(kern[i])-1):
+            for k in range(j+1, len(kern[i])):
+                new_lst_edge.append(tuple([kern[i][j], kern[i][k]]))
+
+    final_lst_edge = []
+    for val in lst_edge:
+        for val2 in new_lst_edge:
+            if val == val2 or val == val2[::-1]:
+                final_lst_edge.append(val)
+
+    lst_edge1 = final_lst_edge
+
+    G = nx.Graph()
+    G.add_nodes_from(lst_nodes)
+    G.add_edges_from(lst_edge1)
+    nx.draw(G, with_labels=True, font_weight='bold')
+    plt.show()
