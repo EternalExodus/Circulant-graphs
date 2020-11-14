@@ -1,4 +1,3 @@
-#Вывод параметров графов Пэли
 import networkx as nx
 import pandas as pd
 from pandas import DataFrame
@@ -54,13 +53,13 @@ def Graph_parameters(N):
     for j in range(j,N+1):
         for i in range(0,index+1):
             k = k+1
-            
-    #print("edges_num =", k)
+    Edges_number = k        
+    #print("edges_num =", Edges_number)
     
     Complete_edges = int(N*(N-1)/2)
     #print("Complete_edges =", Complete_edges)
     
-    Density = k/Complete_edges
+    Density = Edges_number/Complete_edges
     #print("Density =", Density)
     Density_rnd = round(Density,2)
     #print("Density_round =", round(Density,2))
@@ -70,5 +69,5 @@ def Graph_parameters(N):
     #print("Avg_length_shortest =",round(nx.average_shortest_path_length(G),2))
    
     
-    data = [N, s, k, Complete_edges, Density, Density_rnd, Diameter, Avg_length]
+    data = [N, s, Edges_number, Complete_edges, Density, Density_rnd, Diameter, Avg_length]
     print (data)
