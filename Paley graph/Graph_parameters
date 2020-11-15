@@ -71,3 +71,4 @@ def Graph_parameters(N):
     
     data = [N, s, Edges_number, Complete_edges, Density, Density_rnd, Diameter, Avg_length]
     print (data)
+    return data
