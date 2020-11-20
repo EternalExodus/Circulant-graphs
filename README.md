@@ -41,5 +41,5 @@ Cartesian product G×H is the graph with vertex set V_G×V_H. The vertex set of 
 ![alt text](Cartesian_product/cartesian.png "Описание будет тут")
 
 # Graph_drawing
-This script allows you to draw a circulant graph by the number of vertices and a given sheet of generators.
+This script allows you to draw a circulant graph by the number of vertices and a given sheet of generators, and it can also display the parameters.
 Example: Circulant(7, [1,2,3]).
