@@ -1,3 +1,4 @@
+import networkx as nx
 #graph_drawing
 def Circulant(N,s):
     lst_nodes = []
