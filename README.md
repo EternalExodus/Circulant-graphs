@@ -31,7 +31,8 @@ This script describes the implementation of the generation of parameters of the 
 
 # Graph_bisection
 This script describes the implementation of counting the bisection of a graph, as well as visualization of the original and divided into 2 graphs.
-
+Bisection_paley script describes bisection result only for Paley graphs. Example: bisection_paley(7).
+Bisection script describes bisection result for all graphs. It is necessary to enter the number of vertices and the sheet of generators. Example: bisection(7, [1,3]).
 ![alt text](Example/C(9,2,3)/Graph_bisection_N=7.png "Описание будет тут")
 
 # Cartesian_product
