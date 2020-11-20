@@ -1,0 +1,86 @@
+import networkx as nx
+from matplotlib import pyplot as plt
+import networkx as nx
+from networkx.algorithms.community import kernighan_lin_bisection
+
+def Cartesian_product(G_num,H_num):
+    N = G_num
+    s = [1,2]
+
+    lst_nodes = []
+    lst_edge = []
+    
+    i = 0
+    
+    for i in range(1, N+1):
+        lst_nodes.append(i)
+    lst_nodes
+    
+    last_elem = s[-1]
+    index = s.index(last_elem)
+    
+    i = 0
+    j = 1
+    for j in range(j,N+1):
+        for i in range(0,index+1):
+            if j+s[i] <= N:
+                lst_edge.append((j, j+s[i]))
+            else:
+                lst_edge.append((j, j+s[i]-N))
+    
+    G = nx.Graph()
+    G.add_nodes_from(lst_nodes)
+    G.add_edges_from(lst_edge)
+   
+    N = H_num
+    lst_nodes = []
+    lst_edge = []
+    s=[1,1]
+    i = 0
+    
+    for i in range(1, N+1):
+        lst_nodes.append(i)
+    lst_nodes
+    
+    last_elem = s[-1]
+    index = s.index(last_elem)
+    
+    i = 0
+    j = 1
+    for j in range(j,N+1):
+        for i in range(0,index+1):
+            if j+s[i] <= N:
+                lst_edge.append((j, j+s[i]))
+            else:
+                lst_edge.append((j, j+s[i]-N))
+    
+    H = nx.Graph()
+    H.add_nodes_from(lst_nodes)
+    H.add_edges_from(lst_edge)
+    
+    print('Cartesian circular product (G,H)')
+    nx.draw_circular(G, with_labels=True, font_weight='bold')
+    plt.show()
+
+    nx.draw_circular(H, with_labels=True, font_weight='bold')
+    plt.show()
+
+    
+    cart_prod = nx.cartesian_product(G, H)
+    print('Cartesian circular product (G,H)')
+    nx.draw_circular(cart_prod, with_labels=True, font_weight='bold')
+    plt.show()
+    print('Cartesian kamada kawai product (G,H)')
+    nx.draw_kamada_kawai(cart_prod, with_labels=True, font_weight='bold')
+    plt.show()
+
+    print('SWAP G <-> H')
+
+    cart_prod = nx.cartesian_product(H, G)
+    print('Cartesian circular product (H,G)')
+    nx.draw_circular(cart_prod, with_labels=True, font_weight='bold')
+    plt.show()
+    
+    print('Cartesian kamada kawai product (H,G)')
+    nx.draw_kamada_kawai(cart_prod, with_labels=True, font_weight='bold')
+    plt.show()
