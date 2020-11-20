@@ -39,3 +39,7 @@ Bisection script describes bisection result for all graphs. It is necessary to e
 Cartesian product G×H is the graph with vertex set V_G×V_H. The vertex set of the graph Cartesian is the Cartesian product of the vertex sets of the two graphs: V_{G×H} =V_G ​ ×V_H. This means that the Cartesian product of a graph has n_{G}n_{H} vertices.
 
 ![alt text](Cartesian_product/cartesian.png "Описание будет тут")
+
+# Graph_drawing
+This script allows you to draw a circulant graph by the number of vertices and a given sheet of generators.
+Example: Circulant(7, [1,2,3]).
