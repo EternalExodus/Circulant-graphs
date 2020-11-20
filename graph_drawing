@@ -27,3 +27,30 @@ def Circulant(N,s):
     G.add_edges_from(lst_edge)
     nx.draw_circular(G, with_labels=True, font_weight='bold')
     plt.show()
+    
+    i = 0
+    j = 1
+    k = 0 
+    #edges number
+
+    for j in range(j,N+1):
+        for i in range(0,index+1):
+            k = k+1
+    
+    Edges_number = k        
+    print("edges_num =", Edges_number)
+    
+    Complete_edges = int(N*(N-1)/2)
+    print("Complete_edges =", Complete_edges)
+    
+    Density = Edges_number/Complete_edges
+    print("Density =", Density)
+    
+    Density_rnd = round(Density,2)
+    print("Density_round =", round(Density,2))
+    
+    Diameter = nx.diameter(G)
+    print("Diameter =", nx.diameter(G))
+    
+    Avg_length = round(nx.average_shortest_path_length(G),2)
+    print("Avg_length_shortest =",round(nx.average_shortest_path_length(G),2))
