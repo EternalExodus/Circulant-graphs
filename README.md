@@ -33,3 +33,8 @@ This script describes the implementation of the generation of parameters of the 
 This script describes the implementation of counting the bisection of a graph, as well as visualization of the original and divided into 2 graphs.
 
 ![alt text](Example/C(9,2,3)/Graph_bisection_N=7.png "Описание будет тут")
+
+# Cartesian_product
+Cartesian product G×H is the graph with vertex set V_G×V_H. The vertex set of the graph Cartesian is the Cartesian product of the vertex sets of the two graphs: V_{G×H} =V_G ​ ×V_H. This means that the Cartesian product of a graph has n_{G}n_{H} vertices.
+
+![alt text](Circulant-graphs/Cartesian_product/cartesian.png "Описание будет тут")
